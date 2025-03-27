@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlet Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+              tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        customBg: '#F2F6D0',
+        customOrange: '#D98324',
+        customDarkOrange: '#B56E1F' // Perbaiki warna, hapus extra "#"
+      }
+    }
+  }
+}
+
+    </script>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body class="bg-dark-100 text-dark-800">
+  <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50">
+    <!-- Logo -->
+    <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
+        <a href="index.html" class="hover:text-[#EFDCAB]">Home</a>
+        <a href="about.html" class="hover:text-[#EFDCAB]">Tentang Kami</a>
+        <a href="produk.html" class="hover:text-[#EFDCAB]">Produk</a>
+        <a href="galeri.html" class="hover:text-[#EFDCAB]">Galeri</a>
+        <a href="#" class="hover:text-[#EFDCAB]">Outlet</a>
+        <a href="kontak.html" class="hover:text-[#EFDCAB]">Kontak</a>
+    </nav>
+    
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+    
+    <!-- Mobile Navigation -->
+    <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#D98324] text-white md:hidden">
+        <li><a href="index.html" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
+        <li><a href="about.html" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
+        <li><a href="produk.html" class="block p-4 hover:text-[#EFDCAB]">Produk</a></li>
+        <li><a href="galeri.html" class="block p-4 hover:text-[#EFDCAB]">Galeri</a></li>
+        <li><a href="#" class="block p-4 hover:text-[#EFDCAB]">Outlet</a></li>
+        <li><a href="kontak.html" class="block p-4 hover:text-[#EFDCAB]">Kontak</a></li>
+    </ul>
+</header>
+
+<section class="bg-cover bg-center h-screen flex items-center justify-center text-white relative mt-16"
+style="background-image: url('assets/banner.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+    <div class="relative text-center">
+        <h2 data-aos="fade-up" class="text-4xl font-bold">Temukan Outlet Kami</h2>
+        <p data-aos="fade-up" class="mt-2">Kunjungi outlet kami untuk menikmati camilan terbaik dengan kualitas premium.</p>
+    </div>
+</section>
+
+
+<section id="outlet" class="container mx-auto py-16 px-6">
+    <h3 data-aos="fade-up" class="text-3xl font-semibold text-gray-800 text-center">Lokasi Outlet Kami</h3>
+    <div data-aos="fade-up" class="grid md:grid-cols-2 gap-8 mt-8">
+        <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+            <div class="md:w-1/2 w-full md:pr-4">
+                <h4 class="text-xl font-semibold">Pemda Depok</h4>
+                <p class="text-gray-600">Jl. Margonda No.54, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431</p>
+                <span class="block text-red-500 font-bold mt-2">Jam Operasional: 08.00 - 20.00</span>
+            </div>
+            <div class="md:w-1/2 w-full mt-4 md:mt-0">
+                <img src="assets/Outlet/pemdadepok.jpg" alt="Outlet Depok" class="rounded-lg">
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+            <div class="md:w-1/2 w-full md:pr-4">
+                <h4 class="text-xl font-semibold">Warkop BPK slipi</h4>
+                <p class="text-gray-600">Jl. Pejompongan V D No.2 14, RT.14/RW.5, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 1021</p>
+                <span class="block text-red-500 font-bold mt-2">Jam Operasional: 09.00 - 21.00</span>
+            </div>
+            <div class="md:w-1/2 w-full mt-4 md:mt-0">
+                <img src="assets/Outlet/bpkslipi.jpg" alt="Outlet Jakarta" class="rounded-lg">
+            </div>
+        </div>
+    </div>
+    
+    <div data-aos="fade-up" class="grid md:grid-cols-2 gap-8 mt-8">
+      <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+          <div class="md:w-1/2 w-full md:pr-4">
+              <h4 class="text-xl font-semibold">Koperasi ELNUSA TB SIMATUPANG</h4>
+              <p class="text-gray-600">Graha Elnusa Lantai 16, Jl. TB Simatupang Kav. 1 B, RT.10/RW.3, Cilandak Tim., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560</p>
+              <span class="block text-red-500 font-bold mt-2">Jam Operasional: 08.00 - 20.00</span>
+          </div>
+          <div class="md:w-1/2 w-full mt-4 md:mt-0">
+              <img src="assets/Outlet/koperasi elnusa.jpg" alt="Outlet Depok" class="rounded-lg">
+          </div>
+      </div>
+      <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+          <div class="md:w-1/2 w-full md:pr-4">
+              <h4 class="text-xl font-semibold">Warkop Kantin Elnusa</h4>
+              <p class="text-gray-600">Graha Elnusa Lantai 16, Jl. TB Simatupang Kav. 1 B, RT.10/RW.3, Cilandak Tim., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560</p>
+              <span class="block text-red-500 font-bold mt-2">Jam Operasional: 09.00 - 21.00</span>
+          </div>
+          <div class="md:w-1/2 w-full mt-4 md:mt-0">
+              <img src="assets/Outlet/kantinllnusa.jpg" alt="Outlet Jakarta" class="rounded-lg">
+          </div>
+      </div>
+  </div>
+
+  <div data-aos="fade-up" class="grid md:grid-cols-2 gap-8 mt-8">
+    <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+        <div class="md:w-1/2 w-full md:pr-4">
+            <h4 class="text-xl font-semibold">ITC Depok</h4>
+            <p class="text-gray-600">Jl. Margonda No.56, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431</p>
+            <span class="block text-red-500 font-bold mt-2">Jam Operasional: 08.00 - 20.00</span>
+        </div>
+        <div class="md:w-1/2 w-full mt-4 md:mt-0">
+            <img src="assets/Outlet/itcdepok.jpg" alt="Outlet Depok" class="rounded-lg">
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+        <div class="md:w-1/2 w-full md:pr-4">
+            <h4 class="text-xl font-semibold">Kantin Menara 165 </h4>
+            <p class="text-gray-600">Menara 165, Jl. TB Simatupang, RT.3/RW.3, Cilandak Tim., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560</p>
+            <span class="block text-red-500 font-bold mt-2">Jam Operasional: 09.00 - 21.00</span>
+        </div>
+        <div class="md:w-1/2 w-full mt-4 md:mt-0">
+            <img src="assets/Outlet/kantinmenara165.jpg" alt="Outlet Jakarta" class="rounded-lg">
+        </div>
+    </div>
+</div>
+
+
+<div data-aos="fade-up" class="grid md:grid-cols-2 gap-8 mt-8">
+  <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+      <div class="md:w-1/2 w-full md:pr-4">
+          <h4 class="text-xl font-semibold">Kantin Pasar Segar</h4>
+          <p class="text-gray-600">Jl. Tole Iskandar Blok Raden Saleh No.59, RT.6/RW.5, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16412</p>
+          <span class="block text-red-500 font-bold mt-2">Jam Operasional: 08.00 - 20.00</span>
+      </div>
+      <div class="md:w-1/2 w-full mt-4 md:mt-0">
+          <img src="assets/Outlet/kantinpasarsegar.jpg" alt="Outlet Depok" class="rounded-lg">
+      </div>
+  </div>
+  <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+      <div class="md:w-1/2 w-full md:pr-4">
+          <h4 class="text-xl font-semibold">PGC CILILITAN </h4>
+          <p class="text-gray-600">Pusat Grosir Cililitan, Jl. Mayjen Sutoyo No.76, RT.4/RW.11, Cililitan, Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13640</p>
+          <span class="block text-red-500 font-bold mt-2">Jam Operasional: 09.00 - 21.00</span>
+      </div>
+      <div class="md:w-1/2 w-full mt-4 md:mt-0">
+          <img src="assets/Outlet/kantinpgccililitan.jpg" alt="Outlet Jakarta" class="rounded-lg">
+      </div>
+  </div>
+</div>
+
+
+<div data-aos="fade-up" class="grid md:grid-cols-2 gap-8 mt-8">
+  <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+      <div class="md:w-1/2 w-full md:pr-4">
+          <h4 class="text-xl font-semibold">RS HERMINA  Depok</h4>
+          <p class="text-gray-600">Jl. Siliwangi No.50, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16436</p>
+          <span class="block text-red-500 font-bold mt-2">Jam Operasional: 08.00 - 20.00</span>
+      </div>
+      <div class="md:w-1/2 w-full mt-4 md:mt-0">
+          <img src="assets/Outlet/rshermina.jpg" alt="Outlet Depok" class="rounded-lg">
+      </div>
+  </div>
+  <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+      <div class="md:w-1/2 w-full md:pr-4">
+          <h4 class="text-xl font-semibold">KAFE MERDEKA</h4>
+          <p class="text-gray-600"> Jl. Setia 2 No.55, RT.003/RW.004, Jatiwaringin, Kec. Pd. Gede, Kota Bks, Jawa Barat 17411</p>
+          <span class="block text-red-500 font-bold mt-2">Jam Operasional: 09.00 - 21.00</span>
+      </div>
+      <div class="md:w-1/2 w-full mt-4 md:mt-0">
+          <img src="assets/Outlet/kafemerdeka.jpg" alt="Outlet Jakarta" class="rounded-lg">
+      </div>
+  </div>
+</div>
+</section>
+
+      </div>
+    </section><!-- foot -->
+  <footer class="bg-customBg text-dark-800 py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- Logo & Deskripsi -->
+        <div>
+          <h2 class="text-2xl font-bold text-customOrange mb-3">Produk Kami</h2>
+          <p class="text-sm text-dark-700">Solusi digital untuk kebutuhan bisnis Anda. Kami hadir dengan teknologi dan layanan terbaik.</p>
+        </div>
+
+        <!-- Produk / Layanan -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Produk</h3>
+          <ul class="space-y-2 text-sm text-dark-700">
+            <li><a href="#" class="hover:text-customOrange transition">Website Company Profile</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Aplikasi Mobile</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Sistem Informasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigasi -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Menu</h3>
+          <ul class="space-y-2 text-sm text-dark-700">
+            <li><a href="#" class="hover:text-customOrange transition">Beranda</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Tentang Kami</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
+          <p class="text-sm">Jl. Teknologi No. 123, Jakarta</p>
+          <p class="text-sm">Email: info@produkkami.com</p>
+          <p class="text-sm">Telp: (021) 123-4567</p>
+        </div>
+      </div>
+
+      <!-- Garis Bawah -->
+      <div class="mt-10 border-t border-dark-300 pt-6 text-center text-sm text-dark-600">
+        © 2025 ProdukKami. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <script>
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    // Toggle menu saat tombol hamburger diklik
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+    });
+
+    // Menutup menu saat klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.add("hidden");
+        }
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 1000, // Durasi animasi dalam milidetik
+                easing: "ease-in-out", // Efek animasi yang lebih halus
+                once: true // Animasi hanya terjadi sekali saat muncul di viewport
+            });
+        });
+
+</script>
+
+</body>
+</html>
