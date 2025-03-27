@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script>
+        tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        customBg: '#F2F6D0',
+        customOrange: '#D98324',
+        customDarkOrange: '#B56E1F' // Perbaiki warna, hapus extra "#"
+      }
+    }
+  }
+}
+
+      </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50">
+        <!-- Logo -->
+        <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
+            <a href="index.html" class="hover:text-[#EFDCAB]">Home</a>
+            <a href="about.html" class="hover:text-[#EFDCAB]">Tentang Kami</a>
+            <a href="#" class="hover:text-[#EFDCAB]">Produk</a>
+            <a href="galeri.html" class="hover:text-[#EFDCAB]">Galeri</a>
+            <a href="kontak.html" class="hover:text-[#EFDCAB]">Kontak</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
+        <!-- Mobile Navigation -->
+        <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#D98324] text-white md:hidden">
+            <li><a href="index.html" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
+            <li><a href="about.html" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
+            <li><a href="#" class="block p-4 hover:text-[#EFDCAB]">Produk</a></li>
+            <li><a href="galeri.html" class="block p-4 hover:text-[#EFDCAB]">Galeri</a></li>
+            <li><a href="kontak.html" class="block p-4 hover:text-[#EFDCAB]">Kontak</a></li>
+        </ul>
+    </header>
+    
+    
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-screen flex items-center justify-center text-white relative mt-16"
+        style="background-image: url('assets/banner.png');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <h2 data-aos="fade-up" class="relative text-4xl font-bold">Temukan Snack Favoritmu!</h2>
+    </section>
+    
+    
+    <!-- Kategori Filter -->
+    <section class="container mx-auto px-4 py-6 text-center">
+        <h2 data-aos="fade-up" class="text-2xl font-semibold text-gray-800 mb-4">Kategori Produk</h2>
+        <div data-aos="fade-up" class="flex justify-center space-x-4">
+            <a href="#keripik" class="px-4 py-2 bg-customOrange text-white rounded-md hover:bg-customDarkOrange">Keripik</a>
+            <a href="#kacang" class="px-4 py-2 bg-customOrange text-white rounded-md hover:bg-customDarkOrange">Kacang</a>
+            <a href="#coklat" class="px-4 py-2 bg-customOrange text-white rounded-md hover:bg-customDarkOrange">Coklat</a>
+        </div>
+    </section>
+    
+    <!-- Daftar Produk -->
+    <section class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-16">
+        <!-- Produk Keripik -->
+        <div  id="keripik" class="produk-card bg-white p-4 rounded-lg  shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Keripik Singkong Pedas', 'ig1.webp', 'Rp 15.000')">
+            <img src="assets/ig1.webp" alt="Keripik Singkong Pedas" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Keripik Singkong Pedas</h3>
+            <p class="text-gray-600">Rp 15.000</p>
+        </div>
+        <div id="keripik" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Keripik Singkong Pedas', 'ig1.webp', 'Rp 15.000')">
+            <img src="assets/ig1.webp" alt="Keripik Singkong Pedas" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Keripik Singkong Pedas</h3>
+            <p class="text-gray-600">Rp 15.000</p>
+        </div>
+        
+        <div id="keripik" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Keripik Singkong Pedas', 'ig1.webp', 'Rp 15.000')">
+            <img src="assets/ig1.webp" alt="Keripik Singkong Pedas" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Keripik Singkong Pedas</h3>
+            <p class="text-gray-600">Rp 15.000</p>
+        </div>
+        
+        <div id="keripik" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Keripik Singkong Pedas', 'ig1.webp', 'Rp 15.000')">
+            <img src="assets/ig1.webp" alt="Keripik Singkong Pedas" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Keripik Singkong Pedas</h3>
+            <p class="text-gray-600">Rp 15.000</p>
+        </div>
+        
+        <div id="keripik" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Keripik Singkong Pedas', 'ig1.webp', 'Rp 15.000')">
+            <img src="assets/ig1.webp" alt="Keripik Singkong Pedas" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Keripik Singkong Pedas</h3>
+            <p class="text-gray-600">Rp 15.000</p>
+        </div>
+        <div id="keripik" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Keripik Singkong Pedas', 'ig1.webp', 'Rp 15.000')">
+            <img src="assets/ig1.webp" alt="Keripik Singkong Pedas" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Keripik Singkong Pedas</h3>
+            <p class="text-gray-600">Rp 15.000</p>
+        </div>
+        
+        <!-- Produk Kacang -->
+        <div id="kacang" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Kacang Panggang', 'ig2.webp', 'Rp 20.000')">
+            <img src="assets/ig2.webp" alt="Kacang Panggang" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Kacang Panggang</h3>
+            <p class="text-gray-600">Rp 20.000</p>
+        </div>
+        <div id="kacang" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Kacang Panggang', 'ig2.webp', 'Rp 20.000')">
+            <img src="assets/ig2.webp" alt="Kacang Panggang" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Kacang Panggang</h3>
+            <p class="text-gray-600">Rp 20.000</p>
+        </div>
+        
+        <div id="kacang" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Kacang Panggang', 'ig2.webp', 'Rp 20.000')">
+            <img src="assets/ig2.webp" alt="Kacang Panggang" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Kacang Panggang</h3>
+            <p class="text-gray-600">Rp 20.000</p>
+        </div>
+        
+        <div id="kacang" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Kacang Panggang', 'ig2.webp', 'Rp 20.000')">
+            <img src="assets/ig2.webp" alt="Kacang Panggang" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Kacang Panggang</h3>
+            <p class="text-gray-600">Rp 20.000</p>
+        </div>
+        
+        <div id="kacang" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Kacang Panggang', 'ig2.webp', 'Rp 20.000')">
+            <img src="assets/ig2.webp" alt="Kacang Panggang" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Kacang Panggang</h3>
+            <p class="text-gray-600">Rp 20.000</p>
+        </div>
+        
+        <div id="kacang" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Kacang Panggang', 'ig2.webp', 'Rp 20.000')">
+            <img src="assets/ig2.webp" alt="Kacang Panggang" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Kacang Panggang</h3>
+            <p class="text-gray-600">Rp 20.000</p>
+        </div>
+        
+        
+        <!-- Produk Coklat -->
+        <div id="coklat" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Cookies Coklat', 'ig3.webp', 'Rp 25.000')">
+            <img src="assets/ig3.webp" alt="Cookies Coklat" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Cookies Coklat</h3>
+            <p class="text-gray-600">Rp 25.000</p>
+        </div>
+        <div id="coklat" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Cookies Coklat', 'ig3.webp', 'Rp 25.000')">
+            <img src="assets/ig3.webp" alt="Cookies Coklat" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Cookies Coklat</h3>
+            <p class="text-gray-600">Rp 25.000</p>
+        </div>
+        <div id="coklat" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Cookies Coklat', 'ig3.webp', 'Rp 25.000')">
+            <img src="assets/ig3.webp" alt="Cookies Coklat" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Cookies Coklat</h3>
+            <p class="text-gray-600">Rp 25.000</p>
+        </div>
+        <div id="coklat" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Cookies Coklat', 'ig3.webp', 'Rp 25.000')">
+            <img src="assets/ig3.webp" alt="Cookies Coklat" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Cookies Coklat</h3>
+            <p class="text-gray-600">Rp 25.000</p>
+        </div>
+        <div id="coklat" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Cookies Coklat', 'ig3.webp', 'Rp 25.000')">
+            <img src="assets/ig3.webp" alt="Cookies Coklat" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Cookies Coklat</h3>
+            <p class="text-gray-600">Rp 25.000</p>
+        </div>
+        <div id="coklat" class="produk-card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 cursor-pointer" onclick="openModal('Cookies Coklat', 'ig3.webp', 'Rp 25.000')">
+            <img src="assets/ig3.webp" alt="Cookies Coklat" class="w-full h-40 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2 text-gray-800">Cookies Coklat</h3>
+            <p class="text-gray-600">Rp 25.000</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    
+  <footer class="bg-customBg text-gray-800 py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- Logo & Deskripsi -->
+        <div>
+          <h2 class="text-2xl font-bold text-customOrange mb-3">Produk Kami</h2>
+          <p class="text-sm text-gray-700">Solusi digital untuk kebutuhan bisnis Anda. Kami hadir dengan teknologi dan layanan terbaik.</p>
+        </div>
+
+        <!-- Produk / Layanan -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Produk</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-customOrange transition">Website Company Profile</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Aplikasi Mobile</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Sistem Informasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigasi -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Menu</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-customOrange transition">Beranda</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Tentang Kami</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
+          <p class="text-sm">Jl. Teknologi No. 123, Jakarta</p>
+          <p class="text-sm">Email: info@produkkami.com</p>
+          <p class="text-sm">Telp: (021) 123-4567</p>
+        </div>
+      </div>
+
+      <!-- Garis Bawah -->
+      <div class="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
+        © 2025 ProdukKami. All rights reserved.
+      </div>
+    </div>
+  </footer>
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <img id="modal-image" class="w-full h-40 object-cover rounded-md">
+            <h3 id="modal-title" class="text-xl font-semibold mt-4 text-gray-800"></h3>
+            <p id="modal-price" class="text-gray-600"></p>
+            <button class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+    
+    <!-- JavaScript untuk Menu Toggle dan Modal -->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    // Toggle menu saat tombol hamburger diklik
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+    });
+
+    // Menutup menu saat klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.add("hidden");
+        }
+    });
+});
+
+// Fungsi untuk membuka modal
+function openModal(title, image, price) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-image').src = 'assets/' + image; // Tambahkan 'assets/' di depan
+    document.getElementById('modal-price').textContent = price;
+    document.getElementById('modal').classList.remove('hidden');
+}
+
+// Fungsi untuk menutup modal
+function closeModal() {
+    document.getElementById('modal').classList.add('hidden');
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 1000, // Durasi animasi dalam milidetik
+                easing: "ease-in-out", // Efek animasi yang lebih halus
+                once: true // Animasi hanya terjadi sekali saat muncul di viewport
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

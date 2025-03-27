@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="assets/Ellipse 2.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+</head>
+<body class="bg-[#F2F6D0] text-gray-800">
+  <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50">
+    <!-- Logo -->
+    <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
+        <a href="index.html" class="hover:text-[#EFDCAB]">Home</a>
+        <a href="#" class="hover:text-[#EFDCAB]">Tentang Kami</a>
+        <a href="produk.html" class="hover:text-[#EFDCAB]">Produk</a>
+        <a href="galeri.html" class="hover:text-[#EFDCAB]">Galeri</a>
+        <a href="kontak.html" class="hover:text-[#EFDCAB]">Kontak</a>
+    </nav>
+    
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+    
+    <!-- Mobile Navigation -->
+    <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#D98324] text-white md:hidden">
+        <li><a href="index.html" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
+        <li><a href="#" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
+        <li><a href="produk.html" class="block p-4 hover:text-[#EFDCAB]">Produk</a></li>
+        <li><a href="galeri.html" class="block p-4 hover:text-[#EFDCAB]">Galeri</a></li>
+        <li><a href="kontak.html" class="block p-4 hover:text-[#EFDCAB]">Kontak</a></li>
+    </ul>
+</header>
+
+
+    
+
+  
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('assets/banner.png');">
+      <div  class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative text-center">
+          <h1 data-aos="fade-up" class="text-4xl font-bold">Sejarah Kami</h1>
+          <p data-aos="fade-up" class="text-lg mt-2">Perjalanan PT Miriorio Snack Indonesia dari awal hingga kini</p>
+      </div>
+  </section>
+  <!-- Latar Belakang -->
+  <section class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center bg-white">
+    <div  class="md:pl-10 lg:pl-16">
+      <h2 data-aos="fade-up" class="text-3xl font-bold text-[#D98324] mb-4">Latar Belakang</h2>
+      <p data-aos="fade-up" class="text-lg leading-relaxed text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula lorem sit amet justo euismod, nec gravida sapien hendrerit. Suspendisse potenti. Donec efficitur fermentum nibh, ut ullamcorper purus consectetur nec.</p>
+    </div>
+    <div data-aos="fade-up" data-aos="fade-up" class="text-center width:50px;" >
+      <img src="assets/image 6.png" alt="Tentang Perusahaan" class="rounded-lg w-full max-w-sm mx-auto shadow-md">
+    </div>
+  </section>
+
+
+  <!-- Sejarah Perusahaan -->
+  <section id="sejarah" class="max-w-7xl mx-auto px-6 py-12">
+      <div class="text-center mb-10">
+          <h2 data-aos="fade-up" class="text-3xl font-bold text-[#D98324]">Perjalanan Kami</h2>
+          <p data-aos="fade-up" class="text-lg text-gray-700 mt-2">Dari awal yang sederhana hingga menjadi brand ternama.</p>
+      </div>
+
+      <!-- Timeline -->
+      <div data-aos="fade-up" class="relative border-l-4 border-[#D98324] ml-6">
+          <!-- Tahun 2015 -->
+          <div  class="mb-8 ml-6">
+              <div class="absolute w-6 h-6 bg-[#D98324] rounded-full -left-3.5"></div>
+              <h3 class="text-2xl font-semibold text-gray-800">2015 - Awal Berdiri</h3>
+              <p class="text-gray-700">PT Miriorio Snack Indonesia didirikan dengan visi menghadirkan snack berkualitas tinggi.</p>
+          </div>
+
+          <!-- Tahun 2017 -->
+          <div class="mb-8 ml-6">
+              <div class="absolute w-6 h-6 bg-[#D98324] rounded-full -left-3.5"></div>
+              <h3 class="text-2xl font-semibold text-gray-800">2017 - Produk Pertama</h3>
+              <p class="text-gray-700">Meluncurkan produk pertama yang mendapatkan respon positif dari pasar.</p>
+          </div>
+
+          <!-- Tahun 2020 -->
+          <div class="mb-8 ml-6">
+              <div class="absolute w-6 h-6 bg-[#D98324] rounded-full -left-3.5"></div>
+              <h3 class="text-2xl font-semibold text-gray-800">2020 - Ekspansi Pasar</h3>
+              <p class="text-gray-700">Mulai mengekspor produk ke luar negeri, memperluas jaringan distribusi.</p>
+          </div>
+
+          <!-- Tahun 2023 -->
+          <div class="mb-8 ml-6">
+              <div class="absolute w-6 h-6 bg-[#D98324] rounded-full -left-3.5"></div>
+              <h3 class="text-2xl font-semibold text-gray-800">2023 - Inovasi Baru</h3>
+              <p class="text-gray-700">Meluncurkan varian baru dengan inovasi rasa yang lebih beragam.</p>
+          </div>
+      </div>
+  </section>
+  <section class="bg-white py-12">
+    <div data-aos="fade-up" class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-[#D98324] text-center mb-10">Dokumentasi Perjalanan</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Gambar 1 -->
+            <div class="relative group">
+                <img src="assets/img/kantor.jpeg" alt="Kantor Pertama" class="rounded-lg shadow-md w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-lg">
+                    <p class="text-white text-lg font-semibold">Kantor Pertama</p>
+                </div>
+            </div>
+
+            <!-- Gambar 2 -->
+            <div class="relative group">
+                <img src="assets/img/pabrik.jpg" alt="Pabrik Produksi" class="rounded-lg shadow-md w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-lg">
+                    <p class="text-white text-lg font-semibold">Pabrik Produksi</p>
+                </div>
+            </div>
+
+            <!-- Gambar 3 -->
+            <div class="relative group">
+                <img src="assets/ig2.webp" alt="Produk Awal" class="rounded-lg shadow-md w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-lg">
+                    <p class="text-white text-lg font-semibold">Produk Awal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
+  <!-- Visi Misi Tujuan -->
+  <section class="bg-white py-12">
+    <div data-aos="fade-up" class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-[#D98324]">Visi, Misi & Tujuan</h2>
+    </div>
+    <div data-aos="fade-up" class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6">
+      <div class="bg-[#F2F6D0] rounded-xl shadow-md p-6 text-center">
+        <h3 class="text-xl font-semibold text-[#fc9904] mb-3">Visi</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div data-aos="fade-up" class="bg-[#F2F6D0] rounded-xl shadow-md p-6 text-center">
+        <h3 class="text-xl font-semibold text-[#fc9904] mb-3">Misi</h3>
+        <ul class="text-left list-disc list-inside">
+          <li>Meningkatkan kualitas produk.</li>
+          <li>Memberikan pelayanan terbaik.</li>
+          <li>Mengembangkan jaringan distribusi.</li>
+        </ul>
+      </div>
+      <div data-aos="fade-up" class="bg-[#F2F6D0] rounded-xl shadow-md p-6 text-center">
+        <h3 class="text-xl font-semibold text-[#fc9904] mb-3">Tujuan</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legalitas -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div data-aos="fade-up" class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-[#D98324]">Legalitas Perusahaan</h2>
+    </div>
+    <div data-aos="fade-up" class="grid md:grid-cols-2 gap-8 items-start">
+      <ul class="space-y-3 bg-white p-6 rounded-lg shadow-md">
+        <li><strong>Nama Perusahaan:</strong> PT Miriorio Snack Indonesia</li>
+        <li><strong>Nomor Induk Berusaha (NIB):</strong> 1234567890123</li>
+        <li><strong>Nomor SIUP:</strong> 9876543210</li>
+        <li><strong>Alamat:</strong> Jl. Contoh No. 123, Jakarta</li>
+        <li><strong>Nomor NPWP:</strong> 00.123.456.7-890.000</li>
+      </ul>
+      <div data-aos="fade-up" class="text-center">
+        <img src="assets/img/legal.png" alt="Dokumen Legalitas" class="rounded-lg shadow-md w-full max-w-md mx-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up" class="bg-customBg text-gray-800 py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- Logo & Deskripsi -->
+        <div>
+          <h2 class="text-2xl font-bold text-customOrange mb-3">Produk Kami</h2>
+          <p class="text-sm text-gray-700">Solusi digital untuk kebutuhan bisnis Anda. Kami hadir dengan teknologi dan layanan terbaik.</p>
+        </div>
+
+        <!-- Produk / Layanan -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Produk</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-customOrange transition">Website Company Profile</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Aplikasi Mobile</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Sistem Informasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigasi -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Menu</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-customOrange transition">Beranda</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Tentang Kami</a></li>
+            <li><a href="#" class="hover:text-customOrange transition">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
+          <p class="text-sm">Jl. Teknologi No. 123, Jakarta</p>
+          <p class="text-sm">Email: info@produkkami.com</p>
+          <p class="text-sm">Telp: (021) 123-4567</p>
+        </div>
+      </div>
+
+      <!-- Garis Bawah -->
+      <div class="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
+        © 2025 ProdukKami. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+    });
+
+    // Menutup menu saat klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.add("hidden");
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 1000, // Durasi animasi dalam milidetik
+                easing: "ease-in-out", // Efek animasi yang lebih halus
+                once: true // Animasi hanya terjadi sekali saat muncul di viewport
+            });
+        });
+
+</script>
+
+
+
+</body>
+</html>
