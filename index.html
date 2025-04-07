@@ -5,365 +5,421 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Miriorio Snack Indonesia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="icon" type="image/png" href="assets/Ellipse 2.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Alpine.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js" defer></script>
+    
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                customBg: '#F2F6D0',
-                customOrange: '#D98324',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#F2F6D0',
+                        customOrange: '#D98324',
+                    }
+                }
             }
-          }
         }
-      </script>
-
+    </script>
 </head>
 
-
-<body class="bg-[#F2F6D0] scroll-smooth md:scroll-auto">
-  <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50">
-    <!-- Logo -->
-    <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
-    
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
-        <a href="#" class="hover:text-[#EFDCAB]">Home</a>
-        <a href="about.html" class="hover:text-[#EFDCAB]">Tentang Kami</a>
-        <a href="sahabat.html" class="hover:text-[#EFDCAB]">Sahabat Miriorio</a>
-        <a href="produk.html" class="hover:text-[#EFDCAB]">Produk</a>
-        <a href="galeri.html" class="hover:text-[#EFDCAB]">Galeri</a>
-        <a href="Outlet.html" class="hover:text-[#EFDCAB]">Outlet</a>
-        <a href="kontak.html" class="hover:text-[#EFDCAB]">Kontak</a>
-    </nav>
-    
-    <!-- Mobile Menu Toggle Button -->
-    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-    </button>
-    
-    <!-- Mobile Navigation -->
-    <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#D98324] text-white md:hidden">
-        <li><a href="#" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
-        <li><a href="about.html" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
-        <li><a href="sahabat.html" class="block p-4 hover:text-[#EFDCAB]">Sahabar Miriorio</a></li>
-        <li><a href="produk.html" class="block p-4 hover:text-[#EFDCAB]">Produk</a></li>
-        <li><a href="galeri.html" class="block p-4 hover:text-[#EFDCAB]">Galeri</a></li>
-        <li><a href="Outlet.html" class="block p-4 hover:text-[#EFDCAB]">Outlet</a></li>
-        <li><a href="kontak.html" class="block p-4 hover:text-[#EFDCAB]">Kontak</a></li>
-    </ul>
-</header>
-
- 
-    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('assets/banner.png');">
-        <div  class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative text-center">
-            <h1 class="text-4xl font-bold" data-aos="fade-up">PT MIRIORIO SNACK INDONESIA</h1>
-            <h3  data-aos="fade-up" class="text-3xl font-semibold mt-2">Snack Lezat Untuk Setiap Moment</h3>
-            <a data-aos="fade-up" href="produk.html" class="mt-4 inline-block bg-[#D98324] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#EFDCAB]">Lihat Produk</a>
-        </div>
-    </section>
-    
-    <section class="py-16 bg-[#D98324] text-white" >
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 data-aos="fade-up" class="text-[#EFDCAB] text-4xl font-bold mb-6">Tentang Kami</h2>
-            <p data-aos="fade-up" class="max-w-3xl mx-auto text-lg leading-relaxed">PT Miriorio Snack Indonesia adalah produsen snack berkualitas tinggi yang berdedikasi untuk memberikan rasa terbaik dan pengalaman menyenangkan bagi setiap pelanggan. Visi kami adalah menjadi pemimpin industri snack di Indonesia dengan inovasi dan kualitas.</p>
-            
-            <div data-aos="fade-up" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-[#F2F6D0] text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="assets/icons/reliability.png" alt="Kualitas" class="w-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold text-[#D98324]">Kualitas Terbaik</h3>
-                    <p class="mt-2">Kami hanya menggunakan bahan pilihan terbaik untuk menciptakan produk berkualitas tinggi.</p>
-                </div>
-                <div data-aos="fade-up" class="bg-[#F2F6D0] text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="assets/icons/innovation.png" alt="Inovasi" class="w-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold text-[#D98324]">Inovasi</h3>
-                    <p class="mt-2">Kami selalu berinovasi untuk menghadirkan snack dengan rasa dan pengalaman baru.</p>
-                </div>
-                <div data-aos="fade-up" class="bg-[#F2F6D0] text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="assets/icons/trust.png" alt="Kepercayaan" class="w-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold text-[#D98324]">Kepercayaan Pelanggan</h3>
-                    <p class="mt-2">Kepuasan pelanggan adalah prioritas utama kami dalam setiap langkah produksi.</p>
-                </div>
-            </div>
-            <a data-aos="fade-up" href="#produk" class="mt-4 inline-block bg-[#7A4312] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#EFDCAB]">Selengkapnya</a>
-
-        </div>
-    </section>
-    
-    <section id="produk" class="py-16 text-center">
-        <h2 data-aos="fade-up" class="text-[#D98324] text-3xl font-bold">Produk Kami</h2>
-        <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl px-4 mx-auto mt-6">
-            <div class="bg-white p-3 rounded-lg shadow-md">
-                <img src="assets/ig1.webp" alt="Produk 1" class="w-full rounded-md">
-                <h3 class="mt-2 text-base font-semibold">Produk 1</h3>
-                <p class="text-gray-600 text-sm">Deskripsi singkat produk 1.</p>
-            </div>
-            <div class="bg-white p-3 rounded-lg shadow-md">
-                <img src="assets/ig2.webp" alt="Produk 2" class="w-full rounded-md">
-                <h3 class="mt-2 text-base font-semibold">Produk 2</h3>
-                <p class="text-gray-600 text-sm">Deskripsi singkat produk 2.</p>
-            </div>
-            <div class="bg-white p-3 rounded-lg shadow-md">
-                <img src="assets/ig3.webp" alt="Produk 3" class="w-full rounded-md">
-                <h3 class="mt-2 text-base font-semibold">Produk 3</h3>
-                <p class="text-gray-600 text-sm">Deskripsi singkat produk 3.</p>
-            </div>
-        </div>
+<body class="bg-customBg scroll-smooth md:scroll-auto">
+    <header class="fixed top-0 left-0 w-full bg-customOrange bg-opacity-90 p-4 flex justify-between items-center z-50">
+        <!-- Logo -->
+        <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
         
-    </section>
-    <div data-aos="fade-up" class="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
-    <div class="mx-auto px-5">
-        <div class="flex flex-col items-center">
-            <h2 class="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
-            <p class="mt-3 text-lg text-neutral-500 md:text-xl">Frequenty asked questions
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
+            <a href="#" class="hover:text-[#EFDCAB]">Home</a>
+            <a href="about.html" class="hover:text-[#EFDCAB]">Tentang Kami</a>
+            <a href="sahabat.html" class="hover:text-[#EFDCAB]">Sahabat Miriorio</a>
+            <a href="produk.html" class="hover:text-[#EFDCAB]">Produk</a>
+            <a href="galeri.html" class="hover:text-[#EFDCAB]">Galeri</a>
+            <a href="Outlet.html" class="hover:text-[#EFDCAB]">Outlet</a>
+            <a href="kontak.html" class="hover:text-[#EFDCAB]">Kontak</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
+        <!-- Mobile Navigation -->
+        <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-customOrange text-white md:hidden">
+            <li><a href="#" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
+            <li><a href="about.html" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
+            <li><a href="sahabat.html" class="block p-4 hover:text-[#EFDCAB]">Sahabat Miriorio</a></li>
+            <li><a href="produk.html" class="block p-4 hover:text-[#EFDCAB]">Produk</a></li>
+            <li><a href="galeri.html" class="block p-4 hover:text-[#EFDCAB]">Galeri</a></li>
+            <li><a href="Outlet.html" class="block p-4 hover:text-[#EFDCAB]">Outlet</a></li>
+            <li><a href="kontak.html" class="block p-4 hover:text-[#EFDCAB]">Kontak</a></li>
+        </ul>
+    </header>
 
-            </p>
-        </div>
-        <div class="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
-            <div class="py-5">
-                <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                        <span> How does the billing work?</span>
-                        <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
-                    </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Springerdata offers a variety of
-                        billing options, including monthly and annual subscription plans, as well as pay-as-you-go
-                        pricing for certain services. Payment is typically made through a credit card or other
-                        secure online payment method.
-                    </p>
-                </details>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('assets/banner.png');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative text-center">
+                <h1 class="text-4xl font-bold" data-aos="fade-up">PT MIRIORIO SNACK INDONESIA</h1>
+                <h3 data-aos="fade-up" class="text-3xl font-semibold mt-2">Snack Lezat Untuk Setiap Moment</h3>
+                <a data-aos="fade-up" href="produk.html" class="mt-4 inline-block bg-customOrange text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#EFDCAB]">Lihat Produk</a>
             </div>
-            <div class="py-5">
-                <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                        <span> Can I get a refund for my subscription?</span>
-                        <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
-                    </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a 30-day money-back
-                        guarantee for most of its subscription plans. If you are not satisfied with your
-                        subscription within the first 30 days, you can request a full refund. Refunds for
-                        subscriptions that have been active for longer than 30 days may be considered on a
-                        case-by-case basis.
-                    </p>
-                </details>
+        </section>
+        
+        <!-- About Section -->
+        <section class="py-16 bg-customOrange text-white">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 data-aos="fade-up" class="text-[#EFDCAB] text-4xl font-bold mb-6">Tentang Kami</h2>
+                <p data-aos="fade-up" class="max-w-3xl mx-auto text-lg leading-relaxed">PT Miriorio Snack Indonesia adalah produsen snack berkualitas tinggi yang berdedikasi untuk memberikan rasa terbaik dan pengalaman menyenangkan bagi setiap pelanggan. Visi kami adalah menjadi pemimpin industri snack di Indonesia dengan inovasi dan kualitas.</p>
+                
+                <div data-aos="fade-up" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-[#F2F6D0] text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="assets/icons/reliability.png" alt="Kualitas" class="w-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-customOrange">Kualitas Terbaik</h3>
+                        <p class="mt-2">Kami hanya menggunakan bahan pilihan terbaik untuk menciptakan produk berkualitas tinggi.</p>
+                    </div>
+                    <div class="bg-[#F2F6D0] text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="assets/icons/innovation.png" alt="Inovasi" class="w-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-customOrange">Inovasi</h3>
+                        <p class="mt-2">Kami selalu berinovasi untuk menghadirkan snack dengan rasa dan pengalaman baru.</p>
+                    </div>
+                    <div class="bg-[#F2F6D0] text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="assets/icons/trust.png" alt="Kepercayaan" class="w-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-customOrange">Kepercayaan Pelanggan</h3>
+                        <p class="mt-2">Kepuasan pelanggan adalah prioritas utama kami dalam setiap langkah produksi.</p>
+                    </div>
+                </div>
+                <a data-aos="fade-up" href="#produk" class="mt-4 inline-block bg-[#7A4312] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#EFDCAB]">Selengkapnya</a>
             </div>
-            <div class="py-5">
-                <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                        <span> How do I cancel my subscription?</span>
-                        <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
-                    </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">To cancel your subscription, you can
-                        log in to your account and navigate to the subscription management page. From there, you
-                        should be able to cancel your subscription and stop future billing.
-                    </p>
-                </details>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="bg-customOrange py-16 text-white text-center relative">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center" data-aos="fade-up">
+                    <img src="assets/icons/love.png" alt="Pelanggan Puas">
+                    <div class="text-4xl font-bold counter" data-target="1143">0</div>
+                    <p class="text-lg">Pelanggan Puas</p>
+                </div>
+                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/icons/handshake.png" alt="Kualitas Layanan">
+                    <div class="text-4xl font-bold counter" data-target="99">0</div>
+                    <p class="text-lg">Kualitas Layanan</p>
+                </div>
+                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/icons/guarantee.png" alt="Sertifikat Kualitas">
+                    <div class="text-4xl font-bold counter" data-target="6">0</div>
+                    <p class="text-lg">Sertifikat Kualitas</p>
+                </div>
             </div>
-            <div class="py-5">
-                <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                        <span> Is there a free trial?</span>
-                        <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
-                    </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a free trial of our software
-                        for a limited time. During the trial period, you will have access to a limited set of
-                        features and functionality, but you will not be charged.
-                    </p>
-                </details>
+        </section>
+
+        <!-- Products Section -->
+        <section id="produk" class="py-16 text-center">
+            <h2 data-aos="fade-up" class="text-customOrange text-3xl font-bold">Produk Kami</h2>
+            <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl px-4 mx-auto mt-6">
+                <div class="bg-white p-3 rounded-lg shadow-md">
+                    <img src="assets/ig1.webp" alt="Produk 1" class="w-full rounded-md">
+                    <h3 class="mt-2 text-base font-semibold">Produk 1</h3>
+                    <p class="text-gray-600 text-sm">Deskripsi singkat produk 1.</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-md">
+                    <img src="assets/ig2.webp" alt="Produk 2" class="w-full rounded-md">
+                    <h3 class="mt-2 text-base font-semibold">Produk 2</h3>
+                    <p class="text-gray-600 text-sm">Deskripsi singkat produk 2.</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-md">
+                    <img src="assets/ig3.webp" alt="Produk 3" class="w-full rounded-md">
+                    <h3 class="mt-2 text-base font-semibold">Produk 3</h3>
+                    <p class="text-gray-600 text-sm">Deskripsi singkat produk 3.</p>
+                </div>
             </div>
-            <div class="py-5">
-                <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                        <span> How do I contact support?</span>
-                        <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
-                    </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">If you need help with our platform or
-                        have any other questions, you can contact the company's support team by submitting a support
-                        request through the website or by emailing support@ourwebsite.com.
-                    </p>
-                </details>
-            </div>
-            <div class="py-5">
-                <details class="group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
-                        <span> Do you offer any discounts or promotions?</span>
-                        <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
-                    </summary>
-                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions
-                        from time to time. To stay up-to-date on the latest deals and special offers, you can sign
-                        up for the company's newsletter or follow it on social media.
-                    </p>
-                </details>
+        </section>
+
+        <!-- FAQ Section -->
+        <div data-aos="fade-up" class="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+            <div class="mx-auto px-5">
+                <div class="flex flex-col items-center">
+                    <h2 class="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
+                    <p class="mt-3 text-lg text-neutral-500 md:text-xl">Frequently Asked Questions</p>
+                </div>
+                <div class="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>How does the billing work?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Springerdata offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method.</p>
+                        </details>
+                    </div>
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>Can I get a refund for my subscription?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis.</p>
+                        </details>
+                    </div>
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>How do I cancel my subscription?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600">To cancel your subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing.</p>
+                        </details>
+                    </div>
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>Is there a free trial?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a free trial of our software for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged.</p>
+                        </details>
+                    </div>
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>How do I contact support?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600">If you need help with our platform or have any other questions, you can contact the company's support team by submitting a support request through the website or by emailing support@ourwebsite.com.</p>
+                        </details>
+                    </div>
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>Do you offer any discounts or promotions?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions from time to time. To stay up-to-date on the latest deals and special offers, you can sign up for the company's newsletter or follow it on social media.</p>
+                        </details>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<section id="produk" class="py-16 text-center">
-<h2 data-aos="fade-up" class="text-[#D98324] text-3xl font-bold">Apa Kata Mereka?</h2>
-<div data-aos="fade-up" class="max-w-xl md:max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl text-center mt-12">
-    <div id="feedback-carousel" class="relative">
-      <!-- Feedback items -->
-      <div class="feedback-item block" id="feedback-0">
-        <p class="text-lg text-gray-700">"Pelayanan sangat memuaskan dan cepat respon."</p>
-        <div class="mt-4 text-customOrange font-semibold">– Andi Pratama</div>
-      </div>
-      <div class="feedback-item hidden" id="feedback-1">
-        <p class="text-lg text-gray-700">"Website sangat user-friendly dan desainnya profesional."</p>
-        <div class="mt-4 text-customOrange font-semibold">– Sinta Lestari</div>
-      </div>
-      <div class="feedback-item hidden" id="feedback-2">
-        <p class="text-lg text-gray-700">"Sangat terbantu dengan fitur-fitur yang lengkap dan mudah digunakan."</p>
-        <div class="mt-4 text-customOrange font-semibold">– Dimas Hidayat</div>
-      </div>
+     
+        <section id="feedback" class="py-16 text-center">
+            <div class="container mx-auto p-8">
+                <h2 class="text-3xl font-bold text-gray-800 flex items-center justify-center">
+                    <span class="text-red-500 text-4xl mr-2">🍓</span> What our customers are saying
+                </h2>
+                <div class="relative mt-8">
+                    <div id="testimonial-container" class="flex overflow-hidden transition-transform duration-300 ease-in-out">
+                        <div class="testimonial bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] mx-2">
+                            <img src="https://via.placeholder.com/50" class="w-12 h-12 rounded-full mb-4" alt="User ">
+                            <h3 class="font-bold text-gray-800">Rasa enak gak bikin enek, harga murah, kualitas mantap</h3>
+                            <p class="text-gray-600 text-sm mt-2">Enak enak enak, coklatnya mantap...</p>
+                            <div class="flex mt-4 text-yellow-500">⭐⭐⭐⭐⭐</div>
+                            <p class="mt-2 font-semibold text-gray-700">kadone.zea</p>
+                        </div>
+                        <div class="testimonial bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] mx-2">
+                            <img src="https://via.placeholder.com/50" class="w-12 h-12 rounded-full mb-4" alt="User ">
+                            <h3 class="font-bold text-gray-800">Rasa enak untuk harga affordable dan kualitas OKE</h3>
+                            <p class="text-gray-600 text-sm mt-2">Awalnya tau bananania karna...</p>
+                            <div class="flex mt-4 text-yellow-500">⭐⭐⭐⭐⭐</div>
+                            <p class="mt-2 font-semibold text-gray-700">youchooseme.</p>
+                        </div>
+                        <div class="testimonial bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] mx-2">
+                            <img src="https://via.placeholder.com/50" class="w-12 h-12 rounded-full mb-4" alt="User ">
+                            <h3 class="font-bold text-gray-800">Rasanya pas gak berlebihan</h3>
+                            <p class="text-gray-600 text-sm mt-2">Rasa honey nya manis pas bgt...</p>
+                            <div class="flex mt-4 text-yellow-500">⭐⭐⭐⭐⭐</div>
+                            <p class="mt-2 font-semibold text-gray-700">bellapuspita1204</p>
+                        </div>
+                    </div>
+                    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 border-2 border-orange-400 rounded-full bg-white shadow-md">⬅️</button>
+                    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 border-2 border-orange-400 rounded-full bg-white shadow-md">➡️</button>
+                </div>
+            </div>
+        </section>
+        </main>
 
-      <!-- Controls -->
-      <div class="flex justify-center gap-4 mt-6">
-        <button onclick="prevFeedback()" class="px-4 py-2 bg-customOrange hover:bg-orange-700 text-white rounded-xl transition duration-200">Sebelumnya</button>
-        <button onclick="nextFeedback()" class="px-4 py-2 bg-customOrange hover:bg-orange-700 text-white rounded-xl transition duration-200">Selanjutnya</button>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- foot -->
-  <footer data-aos="fade-up" class="bg-customBg text-gray-800 py-10 mt-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <!-- Footer -->
+    <footer data-aos="fade-up" class="bg-customBg text-gray-800 py-10 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Logo & Deskripsi -->
+                <div>
+                    <h2 class="text-2xl font-bold text-customOrange mb-3">Produk Kami</h2>
+                    <p class="text-sm text-gray-700">Solusi digital untuk kebutuhan bisnis Anda. Kami hadir dengan teknologi dan layanan terbaik.</p>
+                </div>
 
-        <!-- Logo & Deskripsi -->
-        <div>
-          <h2 class="text-2xl font-bold text-customOrange mb-3">Produk Kami</h2>
-          <p class="text-sm text-gray-700">Solusi digital untuk kebutuhan bisnis Anda. Kami hadir dengan teknologi dan layanan terbaik.</p>
+                <!-- Produk / Layanan -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Produk</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><a href="#" class="hover:text-customOrange transition">Website Company Profile</a></li>
+                        <li><a href="#" class="hover:text-customOrange transition">Aplikasi Mobile</a></li>
+                        <li><a href="#" class="hover:text-customOrange transition">Sistem Informasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Navigasi -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Menu</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><a href="#" class="hover:text-customOrange transition">Beranda</a></li>
+                        <li><a href="#" class="hover:text-customOrange transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-customOrange transition">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
+                    <p class="text-sm">Jl. Teknologi No. 123, Jakarta</p>
+                    <p class="text-sm">Email: info@produkkami.com</p>
+                    <p class="text-sm">Telp: (021) 123-4567</p>
+                </div>
+            </div>
+
+            <!-- Garis Bawah -->
+            <div class="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
+                © 2025 ProdukKami. All rights reserved.
+            </div>
         </div>
+    </footer>
 
-        <!-- Produk / Layanan -->
-        <div>
-          <h3 class="text-lg font-semibold mb-3">Produk</h3>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li><a href="#" class="hover:text-customOrange transition">Website Company Profile</a></li>
-            <li><a href="#" class="hover:text-customOrange transition">Aplikasi Mobile</a></li>
-            <li><a href="#" class="hover:text-customOrange transition">Sistem Informasi</a></li>
-          </ul>
-        </div>
+    <script>
+        // Menu Toggle for Mobile
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("menu");
 
-        <!-- Navigasi -->
-        <div>
-          <h3 class="text-lg font-semibold mb-3">Menu</h3>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li><a href="#" class="hover:text-customOrange transition">Beranda</a></li>
-            <li><a href="#" class="hover:text-customOrange transition">Tentang Kami</a></li>
-            <li><a href="#" class="hover:text-customOrange transition">Kontak</a></li>
-          </ul>
-        </div>
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("hidden");
+            });
 
-        <!-- Kontak -->
-        <div>
-          <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
-          <p class="text-sm">Jl. Teknologi No. 123, Jakarta</p>
-          <p class="text-sm">Email: info@produkkami.com</p>
-          <p class="text-sm">Telp: (021) 123-4567</p>
-        </div>
-      </div>
-
-      <!-- Garis Bawah -->
-      <div class="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
-        © 2025 ProdukKami. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const items = document.querySelectorAll('.feedback-item');
-    let current = 0;
-
-    function showFeedback(index) {
-      items.forEach((item, i) => {
-        item.classList.toggle('hidden', i !== index);
-        item.classList.toggle('block', i === index);
-      });
-    }
-
-    function nextFeedback() {
-      current = (current + 1) % items.length;
-      showFeedback(current);
-    }
-
-    function prevFeedback() {
-      current = (current - 1 + items.length) % items.length;
-      showFeedback(current);
-    }
-
-    // Optional: auto-slide
-    setInterval(nextFeedback, 5000);
-    document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    menuToggle.addEventListener("click", function () {
-        menu.classList.toggle("hidden");
-    });
-
-    // Menutup menu saat klik di luar area menu
-    document.addEventListener("click", function (event) {
-        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menu.classList.add("hidden");
-        }
-    });
-});
-
-        document.addEventListener("DOMContentLoaded", function() {
-            AOS.init({
-                duration: 1000, // Durasi animasi dalam milidetik
-                easing: "ease-in-out", // Efek animasi yang lebih halus
-                once: true // Animasi hanya terjadi sekali saat muncul di viewport
+            // Close menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.add("hidden");
+                }
             });
         });
+
+        // Initialize AOS
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 1000,
+                easing: "ease-in-out",
+                once: true
+            });
+        });
+
+        // Counter Animation
+        window.onload = function () {
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = 500;
+                let animated = false;
+
+                const updateCounter = () => {
+                    const increment = target / speed;
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                window.addEventListener('scroll', function () {
+                    if (isInViewport(counter) && !animated) {
+                        updateCounter();
+                        animated = true;
+                    }
+                });
+
+                if (isInViewport(counter)) {
+                    updateCounter();
+                    animated = true;
+                }
+            });
+        };
+
+        // Check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+        }
+        const testimonials = document.querySelectorAll('.testimonial');
+    const container = document.getElementById('testimonial-container');
+    let currentIndex = 0;
+
+    function updateTestimonials() {
+        const offset = -currentIndex * 300; // 300 adalah lebar minimum testimonial
+        container.style.transform = `translateX(${offset}px)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+        if (currentIndex < testimonials.length - 1) {
+            currentIndex++;
+            updateTestimonials();
+        } else {
+            currentIndex = 0; // Kembali ke awal jika sudah di akhir
+            updateTestimonials();
+        }
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateTestimonials();
+        } else {
+            currentIndex = testimonials.length - 1; // Kembali ke akhir jika sudah di awal
+            updateTestimonials();
+        }
+    });
     </script>
-  </script>
-
-
+    <style>
+        #testimonial-container {
+            transition: transform 0.3s ease; /* Menambahkan transisi untuk efek halus */
+        }
+        </style>
 </body>
+
 </html>
