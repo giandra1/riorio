@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Generate MoU PT Miriorio Snack</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #D98324;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #D98324;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #c17520;
+    }
+
+    #previewArea {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: white;
+    }
+
+    .mou-title {
+      text-align: center;
+      color: #D98324;
+      margin-bottom: 20px;
+    }
+
+    .mou-section {
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 2px solid #D98324;
+    }
+
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .signature-block {
+      text-align: center;
+      width: 45%;
+    }
+
+    .signature-line {
+      border-top: 1px solid #000;
+      padding-top: 5px;
+      display: inline-block;
+      width: 150px;
+    }
+
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      display: none;
+    }
+
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    @media print {
+
+      .container,
+      button,
+      .status {
+        display: none;
+      }
+
+      #previewArea {
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+    }
+      .btn {
+            background-color: #FF8C00;
+            /* Custom orange color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .btn:hover {
+            background-color: #E67300;
+            /* Darker orange on hover */
+        }
+  </style>
+</head>
+
+<body>
+  <a href="sahabat.html" class="btn">Kembali</a>
+
+  <div class="container">
+    <h2>Formulir MoU - PT Miriorio Snack</h2>
+
+    <form id="mouForm">
+      <div class="form-group">
+        <label for="namaInvestor">Nama Investor:</label>
+        <input type="text" id="namaInvestor" required>
+      </div>
+
+      <div class="form-group">
+        <label for="jabatanInvestor">Jabatan Investor:</label>
+        <input type="text" id="jabatanInvestor" required>
+      </div>
+
+      <div class="form-group">
+        <label for="alamatInvestor">Alamat Investor:</label>
+        <input type="text" id="alamatInvestor" required>
+      </div>
+
+      <div class="form-group">
+        <label for="jumlahInvestasi">Jumlah Investasi:</label>
+        <input type="text" id="jumlahInvestasi" required placeholder="Contoh: Rp 500.000.000">
+      </div>
+
+      <div class="form-group">
+        <label for="jangkaWaktu">Jangka Waktu:</label>
+        <input type="text" id="jangkaWaktu" required placeholder="Contoh: 1 tahun">
+      </div>
+
+      <div class="form-group">
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" required>
+      </div>
+
+      <button type="button" id="previewBtn">Preview MoU</button>
+      <button type="button" id="generatePdfBtn">Download PDF</button>
+    </form>
+
+    <div id="statusMsg" class="status"></div>
+  </div>
+
+  <div id="previewArea" style="display: none;">
+    <div class="mou-title">
+      <h3>SURAT NOTA KESEPAHAMAN (MoU)</h3>
+      <h4>Tentang Investasi di PT Miriorio Snack</h4>
+    </div>
+
+    <p id="tanggalText">Pada hari ini, [TANGGAL], kami yang bertanda tangan di bawah ini:</p>
+
+    <div class="mou-section">
+      <p><strong>1. Pihak Pertama</strong></p>
+      <p style="margin-left: 15px;">Nama : PT Miriorio Snack</p>
+      <p style="margin-left: 15px;">Jabatan : Direktur Utama</p>
+      <p style="margin-left: 15px;">Alamat : Jl. Contoh Alamat No.123, Jakarta</p>
+    </div>
+
+    <div class="mou-section">
+      <p><strong>2. Investor</strong></p>
+      <p style="margin-left: 15px;" id="namaText">Nama : [NAMA INVESTOR]</p>
+      <p style="margin-left: 15px;" id="jabatanText">Jabatan : [JABATAN INVESTOR]</p>
+      <p style="margin-left: 15px;" id="alamatText">Alamat : [ALAMAT INVESTOR]</p>
+    </div>
+
+    <div>
+      <p><strong>Pasal 1: Tujuan Kerjasama</strong></p>
+      <p style="margin-left: 15px;">Melakukan investasi dalam usaha yang dikelola oleh PT Miriorio Snack.</p>
+    </div>
+
+    <div>
+      <p><strong>Pasal 2: Jumlah Investasi</strong></p>
+      <p style="margin-left: 15px;" id="investasiText">Investor akan melakukan investasi sebesar [JUMLAH INVESTASI].</p>
+    </div>
+
+    <div>
+      <p><strong>Pasal 3: Pembagian Hasil</strong></p>
+      <p style="margin-left: 15px;">Investor berhak menerima hasil sebesar 20% dari total keuntungan bersih yang
+        diperoleh oleh PT Miriorio Snack.</p>
+    </div>
+
+    <div>
+      <p><strong>Pasal 4: Jangka Waktu</strong></p>
+      <p style="margin-left: 15px;" id="waktuText">Kerjasama berlaku untuk jangka waktu [JANGKA WAKTU], dan dapat
+        diperpanjang atas kesepakatan kedua belah pihak.</p>
+    </div>
+
+    <div>
+      <p><strong>Pasal 5: Lain-lain</strong></p>
+      <p style="margin-left: 15px;">1. Kesepakatan ini dapat ditinjau kembali sesuai kebutuhan.</p>
+      <p style="margin-left: 15px;">2. Segala perubahan harus didokumentasikan secara tertulis.</p>
+      <p style="margin-left: 15px;">3. Jika terjadi perselisihan, diselesaikan melalui musyawarah mufakat.</p>
+    </div>
+
+    <p style="text-align: right;" id="lokasiText">Jakarta, [TANGGAL]</p>
+
+    <div class="signatures">
+      <div class="signature-block">
+        <p><strong>Pihak Pertama,</strong></p>
+        <br><br><br>
+        <p class="signature-line">PT Miriorio Snack</p>
+        <p>Direktur Utama</p>
+      </div>
+
+      <div class="signature-block">
+        <p><strong>Investor,</strong></p>
+        <br><br><br>
+        <p class="signature-line" id="ttdNamaText">[NAMA INVESTOR]</p>
+        <p id="ttdJabatanText">[JABATAN INVESTOR]</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Inisialisasi tanggal hari ini
+    document.addEventListener('DOMContentLoaded', function () {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('tanggal').value = today;
+    });
+
+    // Fungsi untuk memformat tanggal
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+      // Menggunakan toLocaleDateString untuk format Indonesia
+      return date.toLocaleDateString('id-ID', options);
+    }
+
+    // Fungsi untuk menampilkan pesan status
+    function showStatus(message, isSuccess) {
+      const statusElement = document.getElementById('statusMsg');
+      statusElement.textContent = message;
+      statusElement.style.display = 'block';
+
+      if (isSuccess) {
+        statusElement.className = 'status success';
+      } else {
+        statusElement.className = 'status error';
+      }
+
+      setTimeout(() => {
+        statusElement.style.display = 'none';
+      }, 5000);
+    }
+
+    // Fungsi untuk validasi form
+    function validateForm() {
+      const requiredInputs = document.querySelectorAll('#mouForm input[required]');
+      let valid = true;
+
+      requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+          input.style.borderColor = 'red';
+          valid = false;
+        } else {
+          input.style.borderColor = '#ddd';
+        }
+      });
+
+      if (!valid) {
+        showStatus('Mohon lengkapi semua field yang diperlukan', false);
+      }
+
+      return valid;
+    }
+
+    // Fungsi untuk mengisi template MoU
+    function fillMouTemplate() {
+      const namaInvestor = document.getElementById('namaInvestor').value;
+      const jabatanInvestor = document.getElementById('jabatanInvestor').value;
+      const alamatInvestor = document.getElementById('alamatInvestor').value;
+      const jumlahInvestasi = document.getElementById('jumlahInvestasi').value;
+      const jangkaWaktu = document.getElementById('jangkaWaktu').value;
+      const tanggal = document.getElementById('tanggal').value;
+
+      document.getElementById('tanggalText').textContent = `Pada hari ini, ${formatDate(tanggal)}, kami yang bertanda tangan di bawah ini:`;
+      document.getElementById('namaText').textContent = `Nama : ${namaInvestor}`;
+      document.getElementById('jabatanText').textContent = `Jabatan : ${jabatanInvestor}`;
+      document.getElementById('alamatText').textContent = `Alamat : ${alamatInvestor}`;
+      document.getElementById('investasiText').textContent = `Investor akan melakukan investasi sebesar ${jumlahInvestasi}.`;
+      document.getElementById('waktuText').textContent = `Kerjasama berlaku untuk jangka waktu ${jangkaWaktu}, dan dapat diperpanjang atas kesepakatan kedua belah pihak.`;
+      document.getElementById('lokasiText').textContent = `Jakarta, ${formatDate(tanggal)}`;
+      document.getElementById('ttdNamaText').textContent = namaInvestor;
+      document.getElementById('ttdJabatanText').textContent = jabatanInvestor;
+    }
+
+    // Fungsi untuk preview MoU
+    document.getElementById('previewBtn').addEventListener('click', function () {
+      if (!validateForm()) return;
+
+      fillMouTemplate();
+      document.getElementById('previewArea').style.display = 'block';
+      document.getElementById('previewArea').scrollIntoView({ behavior: 'smooth' });
+
+      showStatus('Preview MoU berhasil ditampilkan', true);
+    });
+
+    // Fungsi untuk print MoU
+    document.getElementById('printBtn').addEventListener('click', function () {
+      if (document.getElementById('previewArea').style.display === 'none') {
+        showStatus('Silakan klik "Preview MoU" terlebih dahulu', false);
+        return;
+      }
+
+      window.print();
+    });
+
+    // Fungsi untuk generate PDF (menggunakan jsPDF)
+    document.getElementById('generatePdfBtn').addEventListener('click', function () {
+      if (document.getElementById('previewArea').style.display === 'none') {
+        showStatus('Silakan klik "Preview MoU" terlebih dahulu', false);
+        return;
+      }
+
+      try {
+        // Pastikan jsPDF tersedia
+        if (!window.jspdf || !window.jspdf.jsPDF) {
+          showStatus('Library jsPDF tidak tersedia. Mohon muat ulang halaman.', false);
+          return;
+        }
+
+        const namaInvestor = document.getElementById('namaInvestor').value.replace(/\s+/g, '_');
+
+        // Menggunakan jsPDF untuk membuat PDF
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4'
+        });
+
+        // Memberitahu user PDF sedang dibuat
+        showStatus('Sedang membuat PDF...', true);
+
+        // Ambil data dari form
+        const tanggal = formatDate(document.getElementById('tanggal').value);
+        const namaInv = document.getElementById('namaInvestor').value;
+        const jabatanInv = document.getElementById('jabatanInvestor').value;
+        const alamatInv = document.getElementById('alamatInvestor').value;
+        const jumlahInv = document.getElementById('jumlahInvestasi').value;
+        const jangkaWaktu = document.getElementById('jangkaWaktu').value;
+
+        // Konfigurasi font dan margin
+        doc.setFont('helvetica', 'normal');
+
+        // Header
+        doc.setFontSize(16);
+        doc.setTextColor(217, 131, 36); // Warna orange untuk judul
+        doc.text('SURAT NOTA KESEPAHAMAN (MoU)', 105, 15, { align: 'center' });
+
+        doc.setFontSize(12);
+        doc.text('Tentang Investasi di PT Miriorio Snack', 105, 22, { align: 'center' });
+
+        // Ubah ke warna hitam untuk teks utama
+        doc.setTextColor(0, 0, 0);
+        doc.setFontSize(10);
+
+        // Mengurangi jarak antar baris
+        const lineSpacing = 5;
+
+        // Pengantar
+        doc.text(`Pada hari ini, ${tanggal}, kami yang bertanda tangan di bawah ini:`, 15, 30);
+
+        // Pihak Pertama - dengan jarak yang dioptimalkan
+        doc.setFontSize(10);
+        doc.text('1. Pihak Pertama', 15, 35 + lineSpacing);
+        doc.text('Nama     : PT Miriorio Snack', 20, 35 + lineSpacing * 2);
+        doc.text('Jabatan  : Direktur Utama', 20, 35 + lineSpacing * 3);
+        doc.text('Alamat   : Jl. Contoh Alamat No.123, Jakarta', 20, 35 + lineSpacing * 4);
+
+        // Pihak Investor - dengan jarak yang dioptimalkan
+        doc.text('2. Investor', 15, 35 + lineSpacing * 5);
+        doc.text(`Nama     : ${namaInv}`, 20, 35 + lineSpacing * 6);
+        doc.text(`Jabatan  : ${jabatanInv}`, 20, 35 + lineSpacing * 7);
+        doc.text(`Alamat   : ${alamatInv}`, 20, 35 + lineSpacing * 8);
+
+        // Pasal-pasal - dengan jarak yang dioptimalkan
+        let yPos = 35 + lineSpacing * 10;
+
+        // Pasal 1
+        doc.text('Pasal 1: Tujuan Kerjasama', 15, yPos);
+        doc.text('Melakukan investasi dalam usaha yang dikelola oleh PT Miriorio Snack.', 20, yPos + lineSpacing);
+
+        // Pasal 2
+        yPos += lineSpacing * 2;
+        doc.text('Pasal 2: Jumlah Investasi', 15, yPos);
+        doc.text(`Investor akan melakukan investasi sebesar ${jumlahInv}.`, 20, yPos + lineSpacing);
+
+        // Pasal 3
+        yPos += lineSpacing * 2;
+        doc.text('Pasal 3: Pembagian Hasil', 15, yPos);
+        doc.text('Investor berhak menerima hasil sebesar 20% dari total keuntungan bersih yang', 20, yPos + lineSpacing);
+        doc.text('diperoleh oleh PT Miriorio Snack.', 20, yPos + lineSpacing * 2);
+
+        // Pasal 4
+        yPos += lineSpacing * 3;
+        doc.text('Pasal 4: Jangka Waktu', 15, yPos);
+        doc.text(`Kerjasama berlaku untuk jangka waktu ${jangkaWaktu}, dan dapat diperpanjang`, 20, yPos + lineSpacing);
+        doc.text('atas kesepakatan kedua belah pihak.', 20, yPos + lineSpacing * 2);
+
+        // Pasal 5
+        yPos += lineSpacing * 3;
+        doc.text('Pasal 5: Lain-lain', 15, yPos);
+        doc.text('1. Kesepakatan ini dapat ditinjau kembali sesuai kebutuhan.', 20, yPos + lineSpacing);
+        doc.text('2. Segala perubahan harus didokumentasikan secara tertulis.', 20, yPos + lineSpacing * 2);
+        doc.text('3. Jika terjadi perselisihan, diselesaikan melalui musyawarah mufakat.', 20, yPos + lineSpacing * 3);
+
+        // Tanda tangan
+        yPos += lineSpacing * 4;
+        doc.text(`Jakarta, ${tanggal}`, 170, yPos, { align: 'right' });
+
+        // Blok tanda tangan
+        yPos += lineSpacing * 4;
+
+        // Pihak Pertama
+        doc.text('Pihak Pertama,', 52, yPos, { align: 'center' });
+        doc.text('PT Miriorio Snack', 52, yPos + lineSpacing * 8, { align: 'center' });
+        doc.text('Direktur Utama', 52, yPos + lineSpacing * 9, { align: 'center' });
+
+        // Pihak Investor
+        doc.text('Investor,', 148, yPos, { align: 'center' });
+        doc.text(namaInv, 148, yPos + lineSpacing * 8, { align: 'center' });
+        doc.text(jabatanInv, 148, yPos + lineSpacing * 9, { align: 'center' });
+
+        // Garis tanda tangan
+        doc.line(37, yPos + lineSpacing * 7, 67, yPos + lineSpacing * 7);
+        doc.line(133, yPos + lineSpacing * 7, 163, yPos + lineSpacing * 7);
+
+        // Simpan PDF
+        doc.save(`MoU_PT_Miriorio_${namaInvestor}.pdf`);
+
+        showStatus('PDF berhasil dibuat dan diunduh', true);
+      } catch (error) {
+        console.error('Error generating PDF:', error);
+        showStatus('Terjadi kesalahan saat membuat PDF. Silakan coba lagi.', false);
+      }
+    });
+  </script>
+</body>
+
+</html>

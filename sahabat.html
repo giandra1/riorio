@@ -8,7 +8,9 @@
     <link rel="icon" type="image/png" href="assets/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <script>
         tailwind.config = {
             theme: {
@@ -22,14 +24,32 @@
             }
         }
     </script>
+
+    <style>
+        .btn {
+            background-color: #FF8C00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #E67300;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-    <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50">
-        <!-- Logo -->
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50"
+        data-aos="fade-down">
         <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
-        
-        <!-- Desktop Navigation -->
+
         <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
             <a href="index.html" class="hover:text-[#EFDCAB]">Home</a>
             <a href="about.html" class="hover:text-[#EFDCAB]">Tentang Kami</a>
@@ -39,15 +59,15 @@
             <a href="Outlet.html" class="hover:text-[#EFDCAB]">Outlet</a>
             <a href="#" class="hover:text-[#EFDCAB]">Kontak</a>
         </nav>
-        
-        <!-- Mobile Menu Toggle Button -->
+
         <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
-        
-        <!-- Mobile Navigation -->
+
         <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#D98324] text-white md:hidden">
             <li><a href="index.html" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
             <li><a href="about.html" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
@@ -59,21 +79,23 @@
         </ul>
     </header>
 
-    <!-- Banner Section -->
-    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('assets/banner.png');">
+    <!-- Banner -->
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
+        style="background-image: url('assets/banner.png');">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative text-center">
-            <h1 class="text-4xl font-bold" data-aos="fade-up">Sahabat Miriorio</h1>
-            <p class="mt-2 text-lg" data-aos="fade-up">Bergabunglah dengan kami untuk menciptakan peluang bisnis yang menguntungkan!</p>
+        <div class="relative text-center" data-aos="zoom-in">
+            <h1 class="text-4xl font-bold">Sahabat Miriorio</h1>
+            <p class="mt-2 text-lg">Bergabunglah dengan kami untuk menciptakan peluang bisnis yang menguntungkan!</p>
         </div>
     </section>
 
+    <!-- Konten -->
     <section class="bg-white text-gray-900 py-16">
         <div class="container mx-auto p-4">
-            <h1 class="text-2xl font-extrabold text-center text-gray-800 mb-6">Sahabat MIRIORIO</h1>
+            <h1 class="text-2xl font-extrabold text-center text-gray-800 mb-6" data-aos="fade-up">Sahabat MIRIORIO</h1>
 
             <!-- Mekanisme Bisnis -->
-            <div class="bg-white p-4 rounded-lg shadow-lg mb-6 border-l-4 border-customOrange">
+            <div class="bg-white p-4 rounded-lg shadow-lg mb-6 border-l-4 border-customOrange" data-aos="fade-right">
                 <h2 class="text-xl font-semibold text-gray-700 mb-3">Mekanisme Bisnis Kemitraan</h2>
                 <p class="text-gray-600 mb-3">Berikut adalah mekanisme bisnis kemitraan Miriorio Snack:</p>
                 <ul class="list-disc pl-4 text-gray-600 space-y-1 text-sm">
@@ -85,7 +107,7 @@
             </div>
 
             <!-- Benefit Kemitraan -->
-            <div class="bg-white p-4 rounded-lg shadow-lg mb-6 border-l-4 border-customOrange">
+            <div class="bg-white p-4 rounded-lg shadow-lg mb-6 border-l-4 border-customOrange" data-aos="fade-left">
                 <h2 class="text-xl font-semibold text-gray-700 mb-3">Benefit Kemitraan</h2>
                 <p class="text-gray-600 mb-3">Keuntungan menjadi mitra Miriorio Snack:</p>
                 <ul class="list-disc pl-4 text-gray-600 space-y-1 text-sm">
@@ -95,14 +117,14 @@
                     <li class="hover:text-customOrange">Dukungan pemasaran digital dan offline</li>
                 </ul>
                 <div class="mt-4">
-                    <button class="bg-customOrange text-white px-4 py-1.5 rounded-lg text-sm hover:bg-customDarkOrange">Gabung Kemitraan</button>
+                    <a href="surat.html" class="btn" data-aos="zoom-in">Gabung Kemitraan</a>
                 </div>
             </div>
 
             <!-- Daftar Investor -->
-            <div class="bg-white p-4 rounded-lg shadow-lg mb-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg mb-6" data-aos="flip-up">
                 <h2 class="text-xl font-semibold text-gray-700 mb-3 border-b pb-1">Daftar Investor</h2>
-                <table class="w-full border-collapse border border-gray-300 text-gray-700 text-sm">
+                <table class="w-full border-collapse border border-gray-300 text-gray-700 text-sm" id="investorTable">
                     <thead>
                         <tr class="bg-customOrange text-white">
                             <th class="border border-gray-300 p-2">No</th>
@@ -111,91 +133,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="hover:bg-gray-100">
-                            <td class="border border-gray-300 p-2 text-center">1</td>
-                            <td class="border border-gray-300 p-2">Contoh Investor</td>
-                            <td class="border border-gray-300 p-2">Rp50.000.000</td>
-                        </tr>
+                        <!-- Investor list akan ditambahkan di sini -->
                     </tbody>
                 </table>
             </div>
-
-            <!-- Daftar Mitra -->
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3 border-b pb-1">Daftar Mitra</h2>
-                <table class="w-full border-collapse border border-gray-300 text-gray-700 text-sm">
-                    <thead>
-                        <tr class="bg-customOrange text-white">
-                            <th class="border border-gray-300 p-2">No</th>
-                            <th class="border border-gray-300 p-2">Nama Mitra</th>
-                            <th class="border border-gray-300 p-2">Lokasi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="hover:bg-gray-100">
-                            <td class="border border-gray-300 p-2 text-center">1</td>
-                            <td class="border border-gray-300 p-2">Contoh Mitra</td>
-                            <td class="border border-gray-300 p-2">Jakarta</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Hubungi Kami -->
-        <div class="text-center mt-6">
-            <button class="bg-customDarkOrange text-white px-4 py-1.5 rounded-lg text-sm hover:bg-customOrange">Hubungi Kami</button>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-customBg text-gray-800 py-10 mt-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Logo & Deskripsi -->
-                <div>
-                    <h2 class="text-2xl font-bold text-customOrange mb-3">Produk Kami</h2>
-                    <p class="text-sm text-gray-700">Solusi digital untuk kebutuhan bisnis Anda. Kami hadir dengan teknologi dan layanan terbaik.</p>
-                </div>
-
-                <!-- Produk / Layanan -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-3">Produk</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><a href="#" class="hover:text-customOrange transition">Website Company Profile</a></li>
-                        <li><a href="#" class="hover:text-customOrange transition">Aplikasi Mobile</a></li>
-                        <li><a href="#" class="hover:text-customOrange transition">Sistem Informasi</a></li>
-                    </ul>
-                </div>
-
-                <!-- Navigasi -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-3">Menu</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><a href="#" class="hover:text-customOrange transition">Beranda</a></li>
-                        <li><a href="#" class="hover:text-customOrange transition">Tentang Kami</a></li>
-                        <li><a href="#" class="hover:text-customOrange transition">Kontak</a></li>
-                    </ul>
-                </div>
-
-                <!-- Kontak -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
-                    <p class="text-sm">Jl. Teknologi No. 123, Jakarta</p>
-                    <p class="text-sm">Email: info@produkkami.com</p>
-                    <p class="text-sm">Telp: (021) 123-4567</p>
-                </div>
-            </div>
-
-            <!-- Garis Bawah -->
-            <div class="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
-                © 2025 PT Miriorio Snack Indonesia. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
+    <!-- Inisialisasi AOS -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+            duration: 800, // durasi animasi
+            once: true     // animasi hanya sekali saat scroll pertama
+        });
+             document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
             const menu = document.getElementById("menu");
 
@@ -203,20 +154,14 @@
                 menu.classList.toggle("hidden");
             });
 
-            // Menutup menu saat klik di luar area menu
+            // Close menu when clicking outside
             document.addEventListener("click", function (event) {
                 if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
                     menu.classList.add("hidden");
                 }
             });
-
-            // Inisialisasi AOS
-            AOS.init({
-                duration: 1000,
-                easing: "ease-in-out",
-                once: true
-            });
         });
+
     </script>
 </body>
 
