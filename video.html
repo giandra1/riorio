@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Kami - PT Miriorio Snack Indonesia</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#F2F6D0',
+                        customOrange: '#D98324',
+                        customDarkOrange: '#B56E1F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="fixed top-0 left-0 w-full bg-[#D98324] bg-opacity-90 p-4 flex justify-between items-center z-50">
+        <!-- Logo -->
+        <img src="assets/Ellipse 2.png" alt="Logo PT Miriorio Snack Indonesia" class="h-12">
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 text-white font-bold ml-auto">
+            <a href="index.html" class="hover:text-[#EFDCAB]">Home</a>
+            <a href="about.html" class="hover:text-[#EFDCAB]">Tentang Kami</a>
+            <a href="sahabat.html" class="hover:text-[#EFDCAB]">Sahabat Miriorio</a>
+            <a href="produk.html" class="hover:text-[#EFDCAB]">Produk</a>
+            <a href="galeri.html" class="hover:text-[#EFDCAB]">Galeri</a>
+            <a href="#" class="hover:text-[#EFDCAB]">Video</a>
+            <a href="Outlet.html" class="hover:text-[#EFDCAB]">Outlet</a>
+            <a href="kontak.html" class="hover:text-[#EFDCAB]">Kontak</a>
+        </nav>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
+        <!-- Mobile Navigation -->
+        <ul id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#D98324] text-white md:hidden">
+            <li><a href="index.html" class="block p-4 hover:text-[#EFDCAB]">Home</a></li>
+            <li><a href="about.html" class="block p-4 hover:text-[#EFDCAB]">Tentang Kami</a></li>
+            <li><a href="sahabat.html" class="block p-4 hover:text-[#EFDCAB]">Sahabat Miriorio</a></li>
+            <li><a href="produk.html" class="block p-4 hover:text-[#EFDCAB]">Produk</a></li>
+            <li><a href="galeri.html" class="block p-4 hover:text-[#EFDCAB]">Galeri</a></li>
+            <li><a href="#" class="block p-4 hover:text-[#EFDCAB]">Video</a></li>
+            <li><a href="Outlet.html" class="block p-4 hover:text-[#EFDCAB]">Outlet</a></li>
+            <li><a href="kontak.html" class="block p-4 hover:text-[#EFDCAB]">Kontak</a></li>
+        </ul>
+    </header>
+    
+    <!-- Hero Section --> 
+    <section class="bg-cover bg-center h-screen flex items-center justify-center text-white relative mt-16"
+    style="background-image: url('assets/banner.png');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative text-center">
+            <h2 data-aos="fade-up" class="text-4xl font-bold mb-4">Video Kami!</h2>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-xl">Saksikan proses pembuatan produk berkualitas kami</p>
+        </div>
+    </section>
+
+    <section id="feedback" class="py-16 text-center">
+        <div class="container mx-auto p-8">
+            <h2 class="text-3xl font-bold text-gray-800 flex items-center justify-center">
+                <span class="text-red-500 text-4xl mr-2">🍓</span> What our customers are saying
+            </h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <video controls class="w-full rounded-md">
+                        <source src="assets/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="mt-4 font-semibold text-gray-700">Preview</p>
+                </div>
+                <!-- Video 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <video controls class="w-full rounded-md">
+                        <source src="assets/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="mt-4 font-semibold text-gray-700">Preview.</p>
+                </div>
+                <!-- Video 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <video controls class="w-full rounded-md">
+                        <source src="assets/video3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="mt-4 font-semibold text-gray-700">Preview</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" class="text-xl font-semibold">Video Title</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-4">
+                <video id="modal-video" class="w-full h-auto" controls>
+                    <source id="modal-video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-customBg text-gray-800 py-10 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Logo & Deskripsi -->
+                <div>
+                    <h2 class="text-2xl font-bold text-customOrange mb-3">PT Miriorio Snack Indonesia</h2>
+                    <p class="text-sm text-gray-700">Menghadirkan camilan berkualitas tinggi dengan cita rasa yang tak terlupakan untuk keluarga Indonesia.</p>
+                </div>
+
+                <!-- Produk / Layanan -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Produk Unggulan</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><a href="#" class="hover:text-customOrange transition">Kacang Bawang Premium</a></li>
+                        <li><a href="#" class="hover:text-customOrange transition">Keripik Singkong Renyah</a></li>
+                        <li><a href="#" class="hover:text-customOrange transition">Aneka Makaroni</a></li>
+                    </ul>
+                </div>
+
+                <!-- Navigasi -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Menu</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><a href="index.html" class="hover:text-customOrange transition">Beranda</a></li>
+                        <li><a href="about.html" class="hover:text-customOrange transition">Tentang Kami</a></li>
+                        <li><a href="galeri.html" class="hover:text-customOrange transition">Galeri</a></li>
+                        <li><a href="kontak.html" class="hover:text-customOrange transition">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Kontak Kami</h3>
+                    <p class="text-sm">Jl. Industri Raya No. 123, Bekasi</p>
+                    <p class="text-sm">Email: info@miriorio.com</p>
+                    <p class="text-sm">Telp: (021) 8888-9999</p>
+                    <p class="text-sm">WhatsApp: +62 812-3456-7890</p>
+                </div>
+            </div>
+
+            <!-- Garis Bawah -->
+            <div class="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
+                © 2025 PT Miriorio Snack Indonesia. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile menu toggle
+            const menuToggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("menu");
+
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("hidden");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.add("hidden");
+                }
+            });
+
+            // AOS Animation
+            AOS.init({
+                duration: 1000,
+                easing: "ease-in-out",
+                once: true
+            });
+
+            // Video filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const videoItems = document.querySelectorAll('.video-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-customOrange', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-customOrange', 'text-white');
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+
+                    const filter = this.getAttribute('data-filter');
+                    
+                    videoItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.setAttribute('data-aos', 'fade-up');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Video modal functionality
+            const modal = document.getElementById('video-modal');
+            const modalVideo = document.getElementById('modal-video');
+            const modalVideoSource = document.getElementById('modal-video-source');
+            const modalTitle = document.getElementById('modal-title');
+            const closeModal = document.getElementById('close-modal');
+            const playBtns = document.querySelectorAll('.play-btn');
+
+            playBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const videoItem = this.closest('.video-item');
+                    const video = videoItem.querySelector('video');
+                    const title = videoItem.querySelector('h3').textContent;
+                    const videoSrc = video.querySelector('source').src;
+
+                    modalTitle.textContent = title;
+                    modalVideoSource.src = videoSrc;
+                    modalVideo.load();
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            closeModal.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    modalVideo.pause();
+                    modalVideo.currentTime = 0;
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    modalVideo.pause();
+                    modalVideo.currentTime = 0;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
